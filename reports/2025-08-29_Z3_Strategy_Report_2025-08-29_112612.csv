@@ -1,0 +1,4 @@
+symbol,side,entry_price,exit_price,quantity,reason,points,pnl
+HCLTECH,SHORT,1454.1,1460.1,1,STOP_LOSS,-6.0,-6.0
+BAJFINANCE,LONG,877.6,884.9,1,END_OF_DAY,7.3,7.3
+NTPC,SHORT,328.9,328.65,1,END_OF_DAY,0.25,0.25

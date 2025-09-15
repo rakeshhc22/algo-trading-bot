@@ -1,0 +1,16 @@
+{
+  "report_date": "2025-08-28",
+  "metrics": {
+    "total_trades": 0,
+    "total_pnl": 0.0,
+    "winners": 0,
+    "losers": 0,
+    "win_rate": 0.0,
+    "avg_win": 0.0,
+    "avg_loss": 0.0,
+    "profit_factor": 0.0,
+    "max_profit": 0.0,
+    "max_loss": 0.0,
+    "avg_points": 0.0
+  }
+}

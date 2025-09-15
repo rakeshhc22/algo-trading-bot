@@ -1,0 +1,516 @@
+2025-08-28 13:48:48,798 INFO    [__main__:143] BRD Trading session started
+2025-08-28 13:48:48,800 INFO    [__main__:147] Credentials loaded
+2025-08-28 13:48:48,824 INFO    [trading.execution_engine:150] BRD Symbol mappings: {'BAJFINANCE': '317', 'HCLTECH': '7229', 'NTPC': '11630'}
+2025-08-28 13:48:49,195 INFO    [websocket:89] Websocket connected
+2025-08-28 13:48:49,196 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 13:48:49,326 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 14:04:45,242 INFO    [__main__:111] BRD config loaded
+2025-08-28 14:04:45,245 INFO    [__main__:114] Credentials loaded
+2025-08-28 14:04:45,792 INFO    [websocket:89] Websocket connected
+2025-08-28 14:04:45,794 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 14:04:46,276 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 14:05:00,295 INFO    [strategy.signal_generator:32] Generating signal for BAJFINANCE on 2025-08-28
+2025-08-28 14:05:01,156 INFO    [data.market_data:102] BAJFINANCE: Yesterday's close = 8.85 (latest from daily data: 2025-08-25)
+2025-08-28 14:05:01,157 INFO    [strategy.signal_generator:34] BAJFINANCE: Yesterday's close = 8.85
+2025-08-28 14:05:03,018 INFO    [data.market_data:151] BAJFINANCE: Today's entry price (closest to 09:24:59) = 8.9 (from 2025-08-28 10:41:00+05:30)
+2025-08-28 14:05:03,021 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's 09:24:59 close = 8.9
+2025-08-28 14:05:03,021 INFO    [strategy.signal_generator:44] BAJFINANCE: LONG signal (today 09:24:59 8.9 > yesterday 8.85)
+2025-08-28 14:05:03,022 ERROR   [__main__:119] Error in engine: cannot assign to field 'quantity'
+Traceback (most recent call last):
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\main.py", line 117, in main
+    result = run_trading_engine(config=config)
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\trading\execution_engine.py", line 128, in run_trading_engine
+    plan.quantity = config.quantity_per_trade
+    ^^^^^^^^^^^^^
+  File "<string>", line 24, in __setattr__
+dataclasses.FrozenInstanceError: cannot assign to field 'quantity'
+2025-08-28 14:12:57,622 INFO    [__main__:111] BRD config loaded
+2025-08-28 14:12:57,623 INFO    [__main__:114] Credentials loaded
+2025-08-28 14:12:58,135 INFO    [websocket:89] Websocket connected
+2025-08-28 14:12:58,136 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 14:12:58,152 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 14:15:00,321 INFO    [strategy.signal_generator:32] Generating signal for BAJFINANCE on 2025-08-28
+2025-08-28 14:15:01,015 INFO    [data.market_data:102] BAJFINANCE: Yesterday's close = 8.85 (latest from daily data: 2025-08-25)
+2025-08-28 14:15:01,016 INFO    [strategy.signal_generator:34] BAJFINANCE: Yesterday's close = 8.85
+2025-08-28 14:15:03,043 INFO    [data.market_data:151] BAJFINANCE: Today's entry price (closest to 09:24:59) = 8.9 (from 2025-08-28 10:41:00+05:30)
+2025-08-28 14:15:03,044 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's 09:24:59 close = 8.9
+2025-08-28 14:15:03,045 INFO    [strategy.signal_generator:44] BAJFINANCE: LONG signal (today 09:24:59 8.9 > yesterday 8.85)
+2025-08-28 14:15:03,045 INFO    [trading.order_manager:101] Placing LONG order for BAJFINANCE
+2025-08-28 14:15:03,046 INFO    [data.dhan_api:550] Placing order for 1: BUY 1
+2025-08-28 14:15:05,015 ERROR   [trading.order_manager:138] Failed to place order for BAJFINANCE: POST /orders failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 14:15:05,017 INFO    [strategy.signal_generator:32] Generating signal for HCLTECH on 2025-08-28
+2025-08-28 14:15:07,116 ERROR   [data.market_data:106] Daily historical data failed for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 14:15:07,123 WARNING [data.market_data:108] Could not get yesterday's close for HCLTECH
+2025-08-28 14:15:07,129 INFO    [strategy.signal_generator:34] HCLTECH: Yesterday's close = None
+2025-08-28 14:15:12,993 INFO    [strategy.signal_generator:37] HCLTECH: Today's 09:24:59 close = None
+2025-08-28 14:15:12,993 WARNING [strategy.signal_generator:52] HCLTECH: NO signal (missing price data - yesterday: None, today: None)
+2025-08-28 14:15:12,994 INFO    [strategy.signal_generator:32] Generating signal for NTPC on 2025-08-28
+2025-08-28 14:15:15,039 ERROR   [data.market_data:106] Daily historical data failed for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 14:15:15,042 WARNING [data.market_data:108] Could not get yesterday's close for NTPC
+2025-08-28 14:15:15,042 INFO    [strategy.signal_generator:34] NTPC: Yesterday's close = None
+2025-08-28 14:15:20,980 INFO    [strategy.signal_generator:37] NTPC: Today's 09:24:59 close = None
+2025-08-28 14:15:20,981 WARNING [strategy.signal_generator:52] NTPC: NO signal (missing price data - yesterday: None, today: None)
+2025-08-28 14:15:21,082 INFO    [__main__:122] Trades: 0
+2025-08-28 14:42:06,962 INFO    [__main__:113] BRD config loaded
+2025-08-28 14:42:06,963 INFO    [__main__:116] Credentials loaded
+2025-08-28 14:42:07,440 INFO    [websocket:89] Websocket connected
+2025-08-28 14:42:07,442 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 14:42:07,491 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 14:43:03,051 INFO    [__main__:113] BRD config loaded
+2025-08-28 14:43:03,053 INFO    [__main__:116] Credentials loaded
+2025-08-28 14:43:03,445 INFO    [websocket:89] Websocket connected
+2025-08-28 14:43:03,446 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 14:43:03,586 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 14:45:00,759 ERROR   [__main__:121] Error in engine: 'MarketDataFetcher' object has no attribute 'get_yesterday_close_price'
+Traceback (most recent call last):
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\main.py", line 119, in main
+    result = run_trading_engine(config=config)
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\trading\execution_engine.py", line 123, in run_trading_engine
+    sig = generate_signal(fetcher, symbol, today)
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\strategy\signal_generator.py", line 39, in generate_signal
+    yesterday_close = fetcher.get_yesterday_close_price(symbol, today_dt)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarketDataFetcher' object has no attribute 'get_yesterday_close_price'. Did you mean: 'get_yesterdays_close_1529'?
+2025-08-28 14:54:57,350 INFO    [__main__:113] BRD config loaded
+2025-08-28 14:54:57,354 INFO    [__main__:116] Credentials loaded
+2025-08-28 14:54:57,997 INFO    [websocket:89] Websocket connected
+2025-08-28 14:54:58,000 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 14:54:58,388 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 14:55:00,391 INFO    [strategy.signal_generator:31] Generating signal for BAJFINANCE on 2025-08-28
+2025-08-28 14:55:00,391 WARNING [strategy.signal_generator:47] Could not get yesterday's close for BAJFINANCE: MarketDataFetcher.get_yesterdays_close_1529() missing 1 required positional argument: 'today'
+2025-08-28 14:55:00,392 INFO    [strategy.signal_generator:60] BAJFINANCE: Yesterday's close = None
+2025-08-28 14:55:00,392 INFO    [strategy.signal_generator:61] BAJFINANCE: Today's entry price = None
+2025-08-28 14:55:00,392 WARNING [strategy.signal_generator:65] BAJFINANCE: NO signal (missing price data - yesterday: None, today: None)
+2025-08-28 14:55:00,392 INFO    [strategy.signal_generator:31] Generating signal for HCLTECH on 2025-08-28
+2025-08-28 14:55:00,393 WARNING [strategy.signal_generator:47] Could not get yesterday's close for HCLTECH: MarketDataFetcher.get_yesterdays_close_1529() missing 1 required positional argument: 'today'
+2025-08-28 14:55:00,393 INFO    [strategy.signal_generator:60] HCLTECH: Yesterday's close = None
+2025-08-28 14:55:00,393 INFO    [strategy.signal_generator:61] HCLTECH: Today's entry price = None
+2025-08-28 14:55:00,394 WARNING [strategy.signal_generator:65] HCLTECH: NO signal (missing price data - yesterday: None, today: None)
+2025-08-28 14:55:00,394 INFO    [strategy.signal_generator:31] Generating signal for NTPC on 2025-08-28
+2025-08-28 14:55:00,395 WARNING [strategy.signal_generator:47] Could not get yesterday's close for NTPC: MarketDataFetcher.get_yesterdays_close_1529() missing 1 required positional argument: 'today'
+2025-08-28 14:55:00,395 INFO    [strategy.signal_generator:60] NTPC: Yesterday's close = None
+2025-08-28 14:55:00,395 INFO    [strategy.signal_generator:61] NTPC: Today's entry price = None
+2025-08-28 14:55:00,395 WARNING [strategy.signal_generator:65] NTPC: NO signal (missing price data - yesterday: None, today: None)
+2025-08-28 14:55:00,556 INFO    [__main__:125] Trades: 0
+2025-08-28 14:59:26,619 INFO    [__main__:113] BRD config loaded
+2025-08-28 14:59:26,620 INFO    [__main__:116] Credentials loaded
+2025-08-28 14:59:27,514 INFO    [websocket:89] Websocket connected
+2025-08-28 14:59:27,519 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 14:59:27,647 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 15:00:00,683 INFO    [strategy.signal_generator:34] Generating signal for BAJFINANCE on 2025-08-28
+2025-08-28 15:00:01,722 INFO    [data.market_data:102] BAJFINANCE: Yesterday's close = 8.85 (latest from daily data: 2025-08-25)
+2025-08-28 15:00:01,723 INFO    [strategy.signal_generator:63] BAJFINANCE: Yesterday's close = 8.85
+2025-08-28 15:00:01,723 INFO    [strategy.signal_generator:64] BAJFINANCE: Today's entry reference price = None
+2025-08-28 15:00:01,723 WARNING [strategy.signal_generator:68] BAJFINANCE: NO signal (missing data)
+2025-08-28 15:00:01,723 INFO    [strategy.signal_generator:34] Generating signal for HCLTECH on 2025-08-28
+2025-08-28 15:00:03,457 ERROR   [data.market_data:106] Daily historical data failed for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 15:00:03,460 WARNING [data.market_data:108] Could not get yesterday's close for HCLTECH
+2025-08-28 15:00:03,461 INFO    [strategy.signal_generator:63] HCLTECH: Yesterday's close = None
+2025-08-28 15:00:03,462 INFO    [strategy.signal_generator:64] HCLTECH: Today's entry reference price = None
+2025-08-28 15:00:03,462 WARNING [strategy.signal_generator:68] HCLTECH: NO signal (missing data)
+2025-08-28 15:00:03,462 INFO    [strategy.signal_generator:34] Generating signal for NTPC on 2025-08-28
+2025-08-28 15:00:05,300 ERROR   [data.market_data:106] Daily historical data failed for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 15:00:05,304 WARNING [data.market_data:108] Could not get yesterday's close for NTPC
+2025-08-28 15:00:05,305 INFO    [strategy.signal_generator:63] NTPC: Yesterday's close = None
+2025-08-28 15:00:05,305 INFO    [strategy.signal_generator:64] NTPC: Today's entry reference price = None
+2025-08-28 15:00:05,306 WARNING [strategy.signal_generator:68] NTPC: NO signal (missing data)
+2025-08-28 15:00:05,401 INFO    [__main__:125] Trades: 0
+2025-08-28 15:01:06,885 INFO    [__main__:113] BRD config loaded
+2025-08-28 15:01:06,887 INFO    [__main__:116] Credentials loaded
+2025-08-28 15:01:07,356 INFO    [websocket:89] Websocket connected
+2025-08-28 15:01:07,356 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 15:01:07,414 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 15:02:00,509 INFO    [strategy.signal_generator:32] Generating signal for BAJFINANCE on 2025-08-28
+2025-08-28 15:02:00,510 INFO    [data.market_data:225] Previous trading day for 2025-08-28 is 2025-08-27
+2025-08-28 15:02:00,510 INFO    [data.market_data:64] Looking for previous trading day close for BAJFINANCE. Today: 2025-08-28, Previous: 2025-08-27
+2025-08-28 15:02:01,525 INFO    [data.market_data:96] Intraday data not available for BAJFINANCE on 2025-08-27 00:00:00+05:30, trying daily data: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-28 15:02:03,377 INFO    [data.market_data:126] BAJFINANCE: Yesterday's close = 8.7 (latest from daily data: 2025-08-26)
+2025-08-28 15:02:03,378 INFO    [strategy.signal_generator:34] BAJFINANCE: Yesterday's close = 8.7
+2025-08-28 15:02:05,352 INFO    [data.market_data:169] BAJFINANCE: Today's entry price (closest to 09:24:59) = 8.9 (from 2025-08-28 10:41:00+05:30)
+2025-08-28 15:02:05,353 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's 09:24:59 close = 8.9
+2025-08-28 15:02:05,353 INFO    [strategy.signal_generator:44] BAJFINANCE: LONG signal (today 09:24:59 8.9 > yesterday 8.7)
+2025-08-28 15:02:05,354 INFO    [trading.order_manager:101] Placing LONG order for BAJFINANCE
+2025-08-28 15:02:05,354 INFO    [data.dhan_api:550] Placing order for 1: BUY 1
+2025-08-28 15:02:07,521 ERROR   [trading.order_manager:138] Failed to place order for BAJFINANCE: POST /orders failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 15:02:07,525 INFO    [strategy.signal_generator:32] Generating signal for HCLTECH on 2025-08-28
+2025-08-28 15:02:07,525 INFO    [data.market_data:225] Previous trading day for 2025-08-28 is 2025-08-27
+2025-08-28 15:02:07,526 INFO    [data.market_data:64] Looking for previous trading day close for HCLTECH. Today: 2025-08-28, Previous: 2025-08-27
+2025-08-28 15:02:09,713 INFO    [data.market_data:96] Intraday data not available for HCLTECH on 2025-08-27 00:00:00+05:30, trying daily data: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-28 15:02:11,148 ERROR   [data.market_data:130] Daily historical data also failed for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 15:02:11,151 WARNING [data.market_data:132] Could not get yesterday's close for HCLTECH
+2025-08-28 15:02:11,151 INFO    [strategy.signal_generator:34] HCLTECH: Yesterday's close = None
+2025-08-28 15:02:13,196 WARNING [data.market_data:176] No intraday data available for HCLTECH on 2025-08-28 00:00:00+05:30, trying LTP: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-28 15:02:17,039 INFO    [strategy.signal_generator:37] HCLTECH: Today's 09:24:59 close = None
+2025-08-28 15:02:17,040 WARNING [strategy.signal_generator:52] HCLTECH: NO signal (missing price data - yesterday: None, today: None)
+2025-08-28 15:02:17,040 INFO    [strategy.signal_generator:32] Generating signal for NTPC on 2025-08-28
+2025-08-28 15:02:17,040 INFO    [data.market_data:225] Previous trading day for 2025-08-28 is 2025-08-27
+2025-08-28 15:02:17,040 INFO    [data.market_data:64] Looking for previous trading day close for NTPC. Today: 2025-08-28, Previous: 2025-08-27
+2025-08-28 15:02:19,143 INFO    [data.market_data:96] Intraday data not available for NTPC on 2025-08-27 00:00:00+05:30, trying daily data: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-28 15:02:21,183 ERROR   [data.market_data:130] Daily historical data also failed for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 15:02:21,186 WARNING [data.market_data:132] Could not get yesterday's close for NTPC
+2025-08-28 15:02:21,187 INFO    [strategy.signal_generator:34] NTPC: Yesterday's close = None
+2025-08-28 15:02:23,129 WARNING [data.market_data:176] No intraday data available for NTPC on 2025-08-28 00:00:00+05:30, trying LTP: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-28 15:02:27,233 INFO    [strategy.signal_generator:37] NTPC: Today's 09:24:59 close = None
+2025-08-28 15:02:27,235 WARNING [strategy.signal_generator:52] NTPC: NO signal (missing price data - yesterday: None, today: None)
+2025-08-28 15:02:27,328 INFO    [__main__:125] Trades: 0
+2025-08-28 15:02:27,329 ERROR   [__main__:131] Report error: name 'get_default_config' is not defined
+Traceback (most recent call last):
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\main.py", line 128, in main
+    rpt = generate_comprehensive_report(trades, out_dir=get_reports_directory())
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\utils\report_generator.py", line 146, in generate_comprehensive_report
+    cfg = get_default_config()
+          ^^^^^^^^^^^^^^^^^^
+NameError: name 'get_default_config' is not defined
+2025-08-28 15:09:21,606 INFO    [__main__:113] BRD config loaded
+2025-08-28 15:09:21,608 INFO    [__main__:116] Credentials loaded
+2025-08-28 15:09:21,638 INFO    [trading.execution_engine:148] BRD Symbol mappings: {'BAJFINANCE': '1', 'HCLTECH': '2', 'NTPC': '3'}
+2025-08-28 15:09:22,048 INFO    [websocket:89] Websocket connected
+2025-08-28 15:09:22,049 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 15:09:22,142 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 15:11:09,873 INFO    [__main__:113] BRD config loaded
+2025-08-28 15:11:09,875 INFO    [__main__:116] Credentials loaded
+2025-08-28 15:11:09,909 INFO    [trading.execution_engine:148] BRD Symbol mappings: {'BAJFINANCE': '1', 'HCLTECH': '2', 'NTPC': '3'}
+2025-08-28 15:11:10,595 INFO    [websocket:89] Websocket connected
+2025-08-28 15:11:10,597 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 15:11:10,911 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 15:12:00,054 INFO    [strategy.signal_generator:34] Generating signal for BAJFINANCE on 2025-08-28
+2025-08-28 15:12:00,656 INFO    [data.market_data:102] BAJFINANCE: Yesterday's close = 8.85 (latest from daily data: 2025-08-25)
+2025-08-28 15:12:00,657 INFO    [strategy.signal_generator:63] BAJFINANCE: Yesterday's close = 8.85
+2025-08-28 15:12:00,657 INFO    [strategy.signal_generator:64] BAJFINANCE: Today's entry reference price = None
+2025-08-28 15:12:00,657 WARNING [strategy.signal_generator:68] BAJFINANCE: NO signal (missing data)
+2025-08-28 15:12:00,661 INFO    [strategy.signal_generator:34] Generating signal for HCLTECH on 2025-08-28
+2025-08-28 15:12:02,716 ERROR   [data.market_data:106] Daily historical data failed for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 15:12:02,718 WARNING [data.market_data:108] Could not get yesterday's close for HCLTECH
+2025-08-28 15:12:02,719 INFO    [strategy.signal_generator:63] HCLTECH: Yesterday's close = None
+2025-08-28 15:12:02,719 INFO    [strategy.signal_generator:64] HCLTECH: Today's entry reference price = None
+2025-08-28 15:12:02,719 WARNING [strategy.signal_generator:68] HCLTECH: NO signal (missing data)
+2025-08-28 15:12:02,723 INFO    [strategy.signal_generator:34] Generating signal for NTPC on 2025-08-28
+2025-08-28 15:12:04,866 ERROR   [data.market_data:106] Daily historical data failed for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-28 15:12:04,870 WARNING [data.market_data:108] Could not get yesterday's close for NTPC
+2025-08-28 15:12:04,871 INFO    [strategy.signal_generator:63] NTPC: Yesterday's close = None
+2025-08-28 15:12:04,871 INFO    [strategy.signal_generator:64] NTPC: Today's entry reference price = None
+2025-08-28 15:12:04,871 WARNING [strategy.signal_generator:68] NTPC: NO signal (missing data)
+2025-08-28 15:12:04,969 INFO    [__main__:125] Trades: 0
+2025-08-28 15:12:04,970 ERROR   [__main__:131] Report error: name 'get_default_config' is not defined
+Traceback (most recent call last):
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\main.py", line 128, in main
+    rpt = generate_comprehensive_report(trades, out_dir=get_reports_directory())
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\utils\report_generator.py", line 146, in generate_comprehensive_report
+    cfg = get_default_config()
+          ^^^^^^^^^^^^^^^^^^
+NameError: name 'get_default_config' is not defined
+2025-08-28 15:21:24,345 INFO    [__main__:113] BRD config loaded
+2025-08-28 15:21:24,347 INFO    [__main__:116] Credentials loaded
+2025-08-28 15:21:24,392 INFO    [trading.execution_engine:150] BRD Symbol mappings: {'BAJFINANCE': '1', 'HCLTECH': '2', 'NTPC': '3'}
+2025-08-28 15:21:24,892 INFO    [websocket:89] Websocket connected
+2025-08-28 15:21:24,894 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 15:21:24,896 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 15:57:18,680 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-28 15:57:18,682 INFO    [__main__:109] API credentials loaded
+2025-08-28 15:57:19,290 INFO    [websocket:89] Websocket connected
+2025-08-28 15:57:19,290 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 15:57:19,301 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 15:58:38,707 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-28 15:58:38,708 INFO    [__main__:109] API credentials loaded
+2025-08-28 15:58:39,265 INFO    [websocket:89] Websocket connected
+2025-08-28 15:58:39,265 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 15:58:39,327 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-28 16:00:58,221 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-28 16:00:58,223 INFO    [__main__:109] API credentials loaded
+2025-08-28 16:00:58,952 INFO    [websocket:89] Websocket connected
+2025-08-28 16:00:58,952 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-28 16:00:59,249 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 09:30:17,460 INFO    [__main__:69] Starting Z3 Strategy
+2025-08-29 09:30:17,463 INFO    [__main__:73] API credentials loaded
+2025-08-29 09:30:17,467 INFO    [input_data.trading_config:60] Data type validation completed
+2025-08-29 09:30:17,467 INFO    [input_data.trading_config:40] Loaded 3 trading parameters from input_data\trading_parameters.csv
+2025-08-29 09:30:17,468 ERROR   [__main__:79] Trading engine error: Z3Strategy.__init__() missing 1 required positional argument: 'config'
+Traceback (most recent call last):
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\main.py", line 77, in main
+    result = run_trading_engine(str(csv_path))
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\trading\execution_engine.py", line 75, in run_trading_engine
+    strategy = Z3Strategy()
+TypeError: Z3Strategy.__init__() missing 1 required positional argument: 'config'
+2025-08-29 09:33:54,384 INFO    [__main__:69] Starting Z3 Strategy
+2025-08-29 09:33:54,386 INFO    [__main__:73] API credentials loaded
+2025-08-29 09:33:54,389 INFO    [input_data.trading_config:60] Data type validation completed
+2025-08-29 09:33:54,389 INFO    [input_data.trading_config:40] Loaded 3 trading parameters from input_data\trading_parameters.csv
+2025-08-29 09:35:46,066 INFO    [__main__:69] Starting Z3 Strategy
+2025-08-29 09:35:46,068 INFO    [__main__:73] API credentials loaded
+2025-08-29 09:35:46,089 ERROR   [__main__:79] Trading engine error: 'str' object has no attribute 'timezone'
+Traceback (most recent call last):
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\main.py", line 77, in main
+    result = run_trading_engine(str(csv_path))
+  File "C:\Users\rakes\Desktop\Z3-PROJECT\trading\execution_engine.py", line 98, in run_trading_engine
+    tz = config.timezone
+         ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'timezone'
+2025-08-29 09:38:52,022 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-29 09:38:52,025 INFO    [__main__:109] API credentials loaded
+2025-08-29 09:38:52,808 INFO    [websocket:89] Websocket connected
+2025-08-29 09:38:52,810 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 09:38:53,063 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 09:40:09,809 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-29 09:40:09,811 INFO    [__main__:109] API credentials loaded
+2025-08-29 09:40:10,323 INFO    [websocket:89] Websocket connected
+2025-08-29 09:40:10,324 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 09:40:10,339 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 09:40:59,399 INFO    [strategy.signal_generator:21] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 09:41:00,412 INFO    [data.market_data:95] Intraday data not available for BAJFINANCE on 2025-08-28 00:00:00+05:30, trying daily data: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:41:04,089 WARNING [data.market_data:144] Intraday data not available for BAJFINANCE on 2025-08-29 00:00:00+05:30: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:41:08,185 INFO    [strategy.signal_generator:34] BAJFINANCE: Yesterday's close = 8.7
+2025-08-29 09:41:08,186 INFO    [strategy.signal_generator:35] BAJFINANCE: Today's entry reference price = None
+2025-08-29 09:41:08,187 WARNING [strategy.signal_generator:38] BAJFINANCE: NO signal (missing data)
+2025-08-29 09:41:08,187 INFO    [strategy.signal_generator:21] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 09:41:10,125 INFO    [data.market_data:95] Intraday data not available for HCLTECH on 2025-08-28 00:00:00+05:30, trying daily data: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:41:12,173 ERROR   [data.market_data:115] Failed to get daily candles for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 09:41:15,451 WARNING [data.market_data:144] Intraday data not available for HCLTECH on 2025-08-29 00:00:00+05:30: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:41:18,116 INFO    [strategy.signal_generator:34] HCLTECH: Yesterday's close = None
+2025-08-29 09:41:18,117 INFO    [strategy.signal_generator:35] HCLTECH: Today's entry reference price = None
+2025-08-29 09:41:18,117 WARNING [strategy.signal_generator:38] HCLTECH: NO signal (missing data)
+2025-08-29 09:41:18,118 INFO    [strategy.signal_generator:21] Generating signal for NTPC on 2025-08-29
+2025-08-29 09:41:25,487 INFO    [data.market_data:95] Intraday data not available for NTPC on 2025-08-28 00:00:00+05:30, trying daily data: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:41:26,101 ERROR   [data.market_data:115] Failed to get daily candles for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 09:41:28,252 WARNING [data.market_data:144] Intraday data not available for NTPC on 2025-08-29 00:00:00+05:30: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:41:32,249 INFO    [strategy.signal_generator:34] NTPC: Yesterday's close = None
+2025-08-29 09:41:32,252 INFO    [strategy.signal_generator:35] NTPC: Today's entry reference price = None
+2025-08-29 09:41:32,253 WARNING [strategy.signal_generator:38] NTPC: NO signal (missing data)
+2025-08-29 09:41:32,348 INFO    [__main__:119] Trading session completed with 0 trades
+2025-08-29 09:41:32,411 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_094132.xlsx
+2025-08-29 09:50:00,093 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-29 09:50:00,095 INFO    [__main__:109] API credentials loaded
+2025-08-29 09:50:00,558 INFO    [websocket:89] Websocket connected
+2025-08-29 09:50:00,558 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 09:50:00,622 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 09:50:59,719 INFO    [strategy.signal_generator:21] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 09:51:00,468 INFO    [data.market_data:85] Intraday failed for BAJFINANCE on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:51:04,417 WARNING [data.market_data:119] Intraday failed for BAJFINANCE on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:51:08,349 INFO    [strategy.signal_generator:34] BAJFINANCE: Yesterday's close = None
+2025-08-29 09:51:08,351 INFO    [strategy.signal_generator:35] BAJFINANCE: Today's entry reference price = None
+2025-08-29 09:51:08,352 WARNING [strategy.signal_generator:38] BAJFINANCE: NO signal (missing data)
+2025-08-29 09:51:08,352 INFO    [strategy.signal_generator:21] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 09:51:10,498 INFO    [data.market_data:85] Intraday failed for HCLTECH on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:51:12,444 ERROR   [data.market_data:96] Daily fallback failed for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 09:51:14,388 WARNING [data.market_data:119] Intraday failed for HCLTECH on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:51:18,384 INFO    [strategy.signal_generator:34] HCLTECH: Yesterday's close = None
+2025-08-29 09:51:18,385 INFO    [strategy.signal_generator:35] HCLTECH: Today's entry reference price = None
+2025-08-29 09:51:18,385 WARNING [strategy.signal_generator:38] HCLTECH: NO signal (missing data)
+2025-08-29 09:51:18,386 INFO    [strategy.signal_generator:21] Generating signal for NTPC on 2025-08-29
+2025-08-29 09:51:20,433 INFO    [data.market_data:85] Intraday failed for NTPC on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:51:23,873 ERROR   [data.market_data:96] Daily fallback failed for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 09:51:24,628 WARNING [data.market_data:119] Intraday failed for NTPC on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 09:51:28,521 INFO    [strategy.signal_generator:34] NTPC: Yesterday's close = None
+2025-08-29 09:51:28,522 INFO    [strategy.signal_generator:35] NTPC: Today's entry reference price = None
+2025-08-29 09:51:28,523 WARNING [strategy.signal_generator:38] NTPC: NO signal (missing data)
+2025-08-29 09:51:28,620 INFO    [__main__:119] Trading session completed with 0 trades
+2025-08-29 09:51:28,683 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_095128.xlsx
+2025-08-29 10:06:47,512 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-29 10:06:47,514 INFO    [__main__:109] API credentials loaded
+2025-08-29 10:06:48,148 INFO    [websocket:89] Websocket connected
+2025-08-29 10:06:48,149 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 10:06:48,542 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 10:10:59,985 INFO    [strategy.signal_generator:21] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 10:11:00,744 INFO    [data.market_data:86] Intraday data unavailable for BAJFINANCE on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:11:04,650 WARNING [data.market_data:121] Intraday data unavailable for BAJFINANCE on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:11:08,641 INFO    [strategy.signal_generator:34] BAJFINANCE: Yesterday's close = None
+2025-08-29 10:11:08,643 INFO    [strategy.signal_generator:35] BAJFINANCE: Today's entry reference price = None
+2025-08-29 10:11:08,643 WARNING [strategy.signal_generator:38] BAJFINANCE: NO signal (missing data)
+2025-08-29 10:11:08,643 INFO    [strategy.signal_generator:21] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 10:11:10,702 INFO    [data.market_data:86] Intraday data unavailable for HCLTECH on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:11:12,748 ERROR   [data.market_data:97] Daily candle fallback failed for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 10:11:14,468 WARNING [data.market_data:121] Intraday data unavailable for HCLTECH on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:11:18,785 INFO    [strategy.signal_generator:34] HCLTECH: Yesterday's close = None
+2025-08-29 10:11:18,786 INFO    [strategy.signal_generator:35] HCLTECH: Today's entry reference price = None
+2025-08-29 10:11:18,786 WARNING [strategy.signal_generator:38] HCLTECH: NO signal (missing data)
+2025-08-29 10:11:18,786 INFO    [strategy.signal_generator:21] Generating signal for NTPC on 2025-08-29
+2025-08-29 10:11:20,778 INFO    [data.market_data:86] Intraday data unavailable for NTPC on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:11:22,618 ERROR   [data.market_data:97] Daily candle fallback failed for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 10:11:24,608 WARNING [data.market_data:121] Intraday data unavailable for NTPC on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:11:28,707 INFO    [strategy.signal_generator:34] NTPC: Yesterday's close = None
+2025-08-29 10:11:28,708 INFO    [strategy.signal_generator:35] NTPC: Today's entry reference price = None
+2025-08-29 10:11:28,708 WARNING [strategy.signal_generator:38] NTPC: NO signal (missing data)
+2025-08-29 10:11:28,774 INFO    [__main__:119] Trading session completed with 0 trades
+2025-08-29 10:11:28,856 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_101128.xlsx
+2025-08-29 10:28:32,415 INFO    [__main__:106] Starting Z3 Strategy with BRD configuration
+2025-08-29 10:28:32,431 INFO    [__main__:109] API credentials loaded
+2025-08-29 10:28:32,955 INFO    [websocket:89] Websocket connected
+2025-08-29 10:28:32,958 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 10:28:32,965 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 10:30:59,658 INFO    [strategy.signal_generator:22] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 10:31:01,027 INFO    [data.market_data:86] Intraday data unavailable for BAJFINANCE on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:31:04,334 WARNING [data.market_data:121] Intraday data unavailable for BAJFINANCE on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:31:08,402 INFO    [strategy.signal_generator:36] BAJFINANCE: Yesterday's close = None
+2025-08-29 10:31:08,402 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's entry reference price = None
+2025-08-29 10:31:08,402 WARNING [strategy.signal_generator:40] BAJFINANCE: NO signal (missing data)
+2025-08-29 10:31:08,403 INFO    [strategy.signal_generator:22] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 10:31:10,352 INFO    [data.market_data:86] Intraday data unavailable for HCLTECH on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:31:12,390 ERROR   [data.market_data:97] Daily candle fallback failed for HCLTECH: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 10:31:14,254 WARNING [data.market_data:121] Intraday data unavailable for HCLTECH on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:31:18,539 INFO    [strategy.signal_generator:36] HCLTECH: Yesterday's close = None
+2025-08-29 10:31:18,539 INFO    [strategy.signal_generator:37] HCLTECH: Today's entry reference price = None
+2025-08-29 10:31:18,539 WARNING [strategy.signal_generator:40] HCLTECH: NO signal (missing data)
+2025-08-29 10:31:18,540 INFO    [strategy.signal_generator:22] Generating signal for NTPC on 2025-08-29
+2025-08-29 10:31:20,482 INFO    [data.market_data:86] Intraday data unavailable for NTPC on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:31:22,428 ERROR   [data.market_data:97] Daily candle fallback failed for NTPC: POST /charts/historical failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'Missing required fields, bad values for parameters etc.'}
+2025-08-29 10:31:24,381 WARNING [data.market_data:121] Intraday data unavailable for NTPC on 2025-08-29: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:31:28,369 INFO    [strategy.signal_generator:36] NTPC: Yesterday's close = None
+2025-08-29 10:31:28,370 INFO    [strategy.signal_generator:37] NTPC: Today's entry reference price = None
+2025-08-29 10:31:28,371 WARNING [strategy.signal_generator:40] NTPC: NO signal (missing data)
+2025-08-29 10:31:28,468 INFO    [__main__:119] Trading session completed with 0 trades
+2025-08-29 10:31:28,532 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_103128.xlsx
+2025-08-29 10:48:43,767 INFO    [__main__:125] Starting Z3 Strategy with BRD configuration
+2025-08-29 10:48:43,768 INFO    [__main__:128] API credentials loaded
+2025-08-29 10:48:44,101 INFO    [websocket:89] Websocket connected
+2025-08-29 10:48:44,101 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 10:48:44,296 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 10:50:59,377 INFO    [strategy.signal_generator:22] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 10:50:59,862 INFO    [data.market_data:89] Intraday data unavailable for BAJFINANCE on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:51:03,801 INFO    [strategy.signal_generator:36] BAJFINANCE: Yesterday's close = None
+2025-08-29 10:51:03,801 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's entry reference price = 877.6
+2025-08-29 10:51:03,802 WARNING [strategy.signal_generator:40] BAJFINANCE: NO signal (missing data)
+2025-08-29 10:51:03,802 INFO    [strategy.signal_generator:22] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 10:51:05,823 INFO    [data.market_data:89] Intraday data unavailable for HCLTECH on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:51:09,885 INFO    [strategy.signal_generator:36] HCLTECH: Yesterday's close = None
+2025-08-29 10:51:09,886 INFO    [strategy.signal_generator:37] HCLTECH: Today's entry reference price = 1454.1
+2025-08-29 10:51:09,886 WARNING [strategy.signal_generator:40] HCLTECH: NO signal (missing data)
+2025-08-29 10:51:09,887 INFO    [strategy.signal_generator:22] Generating signal for NTPC on 2025-08-29
+2025-08-29 10:51:11,840 INFO    [data.market_data:89] Intraday data unavailable for NTPC on 2025-08-28: POST /charts/intraday failed: 400 {'errorType': 'Input_Exception', 'errorCode': 'DH-905', 'errorMessage': 'System is unable to fetch data due to incorrect parameters or no data present'}
+2025-08-29 10:51:15,825 INFO    [strategy.signal_generator:36] NTPC: Yesterday's close = None
+2025-08-29 10:51:15,826 INFO    [strategy.signal_generator:37] NTPC: Today's entry reference price = 328.9
+2025-08-29 10:51:15,827 WARNING [strategy.signal_generator:40] NTPC: NO signal (missing data)
+2025-08-29 10:51:15,911 INFO    [__main__:138] Trading session completed with 0 trades
+2025-08-29 10:51:15,953 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_105115.xlsx
+2025-08-29 10:54:55,313 INFO    [__main__:125] Starting Z3 Strategy with BRD configuration
+2025-08-29 10:54:55,314 INFO    [__main__:128] API credentials loaded
+2025-08-29 10:54:55,663 INFO    [websocket:89] Websocket connected
+2025-08-29 10:54:55,664 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 10:54:55,833 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 10:55:59,885 INFO    [strategy.signal_generator:22] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 10:56:00,507 INFO    [data.market_data:96] Using latest available close for BAJFINANCE: 876.25 on 2025-08-26
+2025-08-29 10:56:02,331 INFO    [strategy.signal_generator:36] BAJFINANCE: Yesterday's close = 876.25
+2025-08-29 10:56:02,332 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's entry reference price = 877.6
+2025-08-29 10:56:02,332 INFO    [strategy.signal_generator:44] BAJFINANCE: LONG signal
+2025-08-29 10:56:02,333 INFO    [strategy.signal_generator:22] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 10:56:04,324 INFO    [data.market_data:96] Using latest available close for HCLTECH: 1492.8 on 2025-08-26
+2025-08-29 10:56:06,311 INFO    [strategy.signal_generator:36] HCLTECH: Yesterday's close = 1492.8
+2025-08-29 10:56:06,312 INFO    [strategy.signal_generator:37] HCLTECH: Today's entry reference price = 1454.1
+2025-08-29 10:56:06,312 INFO    [strategy.signal_generator:47] HCLTECH: SHORT signal
+2025-08-29 10:56:06,313 INFO    [strategy.signal_generator:22] Generating signal for NTPC on 2025-08-29
+2025-08-29 10:56:08,343 INFO    [data.market_data:96] Using latest available close for NTPC: 333.2 on 2025-08-26
+2025-08-29 10:56:10,345 INFO    [strategy.signal_generator:36] NTPC: Yesterday's close = 333.2
+2025-08-29 10:56:10,346 INFO    [strategy.signal_generator:37] NTPC: Today's entry reference price = 328.9
+2025-08-29 10:56:10,346 INFO    [strategy.signal_generator:47] NTPC: SHORT signal
+2025-08-29 10:56:10,406 INFO    [__main__:138] Trading session completed with 0 trades
+2025-08-29 10:56:10,439 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_105610.xlsx
+2025-08-29 11:21:21,944 INFO    [__main__:125] Starting Z3 Strategy with BRD configuration
+2025-08-29 11:21:21,945 INFO    [__main__:128] API credentials loaded
+2025-08-29 11:21:22,299 INFO    [websocket:89] Websocket connected
+2025-08-29 11:21:22,301 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 11:21:22,468 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 11:23:00,780 INFO    [__main__:125] Starting Z3 Strategy with BRD configuration
+2025-08-29 11:23:00,781 INFO    [__main__:128] API credentials loaded
+2025-08-29 11:23:01,158 INFO    [websocket:89] Websocket connected
+2025-08-29 11:23:01,158 INFO    [data.dhan_api:156] WebSocket feed connection established
+2025-08-29 11:23:01,313 INFO    [data.dhan_api:199] WebSocket feed connected successfully
+2025-08-29 11:23:59,357 INFO    [strategy.signal_generator:22] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 11:23:59,923 INFO    [data.market_data:96] Using latest available close for BAJFINANCE: 876.25 on 2025-08-26
+2025-08-29 11:24:01,842 INFO    [strategy.signal_generator:36] BAJFINANCE: Yesterday's close = 876.25
+2025-08-29 11:24:01,843 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's entry reference price = 877.6
+2025-08-29 11:24:01,843 INFO    [strategy.signal_generator:44] BAJFINANCE: LONG signal
+2025-08-29 11:24:01,844 INFO    [trading.order_manager:63] Placing LONG order for BAJFINANCE (securityId: 317)
+2025-08-29 11:24:01,844 INFO    [data.dhan_api:550] Placing order for 317: BUY 1
+2025-08-29 11:24:03,861 INFO    [trading.order_manager:98] Order placed successfully for BAJFINANCE: order_id=4125082952153
+2025-08-29 11:24:03,889 INFO    [strategy.signal_generator:22] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 11:24:05,819 INFO    [data.market_data:96] Using latest available close for HCLTECH: 1492.8 on 2025-08-26
+2025-08-29 11:24:07,826 INFO    [strategy.signal_generator:36] HCLTECH: Yesterday's close = 1492.8
+2025-08-29 11:24:07,827 INFO    [strategy.signal_generator:37] HCLTECH: Today's entry reference price = 1454.1
+2025-08-29 11:24:07,827 INFO    [strategy.signal_generator:47] HCLTECH: SHORT signal
+2025-08-29 11:24:07,828 INFO    [trading.order_manager:63] Placing SHORT order for HCLTECH (securityId: 7229)
+2025-08-29 11:24:07,828 INFO    [data.dhan_api:550] Placing order for 7229: SELL 1
+2025-08-29 11:24:09,793 INFO    [trading.order_manager:98] Order placed successfully for HCLTECH: order_id=10125082939283
+2025-08-29 11:24:09,796 INFO    [strategy.signal_generator:22] Generating signal for NTPC on 2025-08-29
+2025-08-29 11:24:11,830 INFO    [data.market_data:96] Using latest available close for NTPC: 333.2 on 2025-08-26
+2025-08-29 11:24:13,864 INFO    [strategy.signal_generator:36] NTPC: Yesterday's close = 333.2
+2025-08-29 11:24:13,864 INFO    [strategy.signal_generator:37] NTPC: Today's entry reference price = 328.9
+2025-08-29 11:24:13,864 INFO    [strategy.signal_generator:47] NTPC: SHORT signal
+2025-08-29 11:24:13,865 INFO    [trading.order_manager:63] Placing SHORT order for NTPC (securityId: 11630)
+2025-08-29 11:24:13,865 INFO    [data.dhan_api:550] Placing order for 11630: SELL 1
+2025-08-29 11:24:15,849 INFO    [trading.order_manager:98] Order placed successfully for NTPC: order_id=3125082953003
+2025-08-29 11:24:28,092 INFO    [trading.order_manager:114] Exiting position for HCLTECH (order_id: 10125082939283)
+2025-08-29 11:24:30,048 WARNING [trading.order_manager:124] Native exit_order failed for HCLTECH: POST /orders/10125082939283/exit failed: 404 {'timestamp': 1756446870021, 'status': 404, 'error': 'Not Found', 'path': '/v2/orders/10125082939283/exit'}
+2025-08-29 11:24:30,051 INFO    [data.dhan_api:550] Placing order for 7229: BUY 1
+2025-08-29 11:24:32,029 INFO    [trading.order_manager:148] Position exited via reverse MARKET order for HCLTECH
+2025-08-29 11:26:05,728 INFO    [trading.order_manager:114] Exiting position for BAJFINANCE (order_id: 4125082952153)
+2025-08-29 11:26:06,644 WARNING [trading.order_manager:124] Native exit_order failed for BAJFINANCE: POST /orders/4125082952153/exit failed: 404 {'timestamp': 1756446966641, 'status': 404, 'error': 'Not Found', 'path': '/v2/orders/4125082952153/exit'}
+2025-08-29 11:26:06,645 INFO    [data.dhan_api:550] Placing order for 317: SELL 1
+2025-08-29 11:26:08,711 INFO    [trading.order_manager:148] Position exited via reverse MARKET order for BAJFINANCE
+2025-08-29 11:26:08,712 INFO    [trading.order_manager:114] Exiting position for NTPC (order_id: 3125082953003)
+2025-08-29 11:26:10,449 WARNING [trading.order_manager:124] Native exit_order failed for NTPC: POST /orders/3125082953003/exit failed: 404 {'timestamp': 1756446970443, 'status': 404, 'error': 'Not Found', 'path': '/v2/orders/3125082953003/exit'}
+2025-08-29 11:26:10,451 INFO    [data.dhan_api:550] Placing order for 11630: BUY 1
+2025-08-29 11:26:12,450 INFO    [trading.order_manager:148] Position exited via reverse MARKET order for NTPC
+2025-08-29 11:26:12,521 INFO    [__main__:138] Trading session completed with 3 trades
+2025-08-29 11:26:12,580 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_112612.xlsx
+2025-08-29 12:37:59,030 INFO    [__main__:125] Starting Z3 Strategy with BRD configuration
+2025-08-29 12:37:59,034 INFO    [__main__:128] API credentials loaded
+2025-08-29 12:37:59,621 INFO    [websocket:89] Websocket connected
+2025-08-29 12:37:59,622 INFO    [data.dhan_api:147] WebSocket feed connection established
+2025-08-29 12:37:59,629 INFO    [data.dhan_api:186] WebSocket feed connected successfully
+2025-08-29 12:40:59,770 INFO    [strategy.signal_generator:22] Generating signal for BAJFINANCE on 2025-08-29
+2025-08-29 12:41:00,435 INFO    [data.market_data:96] Using latest available close for BAJFINANCE: 876.25 on 2025-08-26
+2025-08-29 12:41:02,347 INFO    [strategy.signal_generator:36] BAJFINANCE: Yesterday's close = 876.25
+2025-08-29 12:41:02,347 INFO    [strategy.signal_generator:37] BAJFINANCE: Today's entry reference price = 877.6
+2025-08-29 12:41:02,348 INFO    [strategy.signal_generator:44] BAJFINANCE: LONG signal
+2025-08-29 12:41:02,348 INFO    [trading.order_manager:63] Placing LONG order for BAJFINANCE (securityId: 317)
+2025-08-29 12:41:02,348 INFO    [data.dhan_api:512] Placing order for 317: BUY 1
+2025-08-29 12:41:04,322 INFO    [trading.order_manager:98] Order placed successfully for BAJFINANCE: order_id=10125082949593
+2025-08-29 12:41:04,337 INFO    [strategy.signal_generator:22] Generating signal for HCLTECH on 2025-08-29
+2025-08-29 12:41:07,379 INFO    [data.market_data:96] Using latest available close for HCLTECH: 1492.8 on 2025-08-26
+2025-08-29 12:41:08,349 INFO    [strategy.signal_generator:36] HCLTECH: Yesterday's close = 1492.8
+2025-08-29 12:41:08,349 INFO    [strategy.signal_generator:37] HCLTECH: Today's entry reference price = 1454.1
+2025-08-29 12:41:08,353 INFO    [strategy.signal_generator:47] HCLTECH: SHORT signal
+2025-08-29 12:41:08,353 INFO    [trading.order_manager:63] Placing SHORT order for HCLTECH (securityId: 7229)
+2025-08-29 12:41:08,354 INFO    [data.dhan_api:512] Placing order for 7229: SELL 1
+2025-08-29 12:41:10,319 INFO    [trading.order_manager:98] Order placed successfully for HCLTECH: order_id=9125082950623
+2025-08-29 12:41:10,320 INFO    [strategy.signal_generator:22] Generating signal for NTPC on 2025-08-29
+2025-08-29 12:41:12,374 INFO    [data.market_data:96] Using latest available close for NTPC: 333.2 on 2025-08-26
+2025-08-29 12:41:14,315 INFO    [strategy.signal_generator:36] NTPC: Yesterday's close = 333.2
+2025-08-29 12:41:14,315 INFO    [strategy.signal_generator:37] NTPC: Today's entry reference price = 328.9
+2025-08-29 12:41:14,316 INFO    [strategy.signal_generator:47] NTPC: SHORT signal
+2025-08-29 12:41:14,316 INFO    [trading.order_manager:63] Placing SHORT order for NTPC (securityId: 11630)
+2025-08-29 12:41:14,316 INFO    [data.dhan_api:512] Placing order for 11630: SELL 1
+2025-08-29 12:41:16,362 INFO    [trading.order_manager:98] Order placed successfully for NTPC: order_id=10125082949623
+2025-08-29 12:41:28,378 INFO    [trading.order_manager:114] Exiting position for HCLTECH (order_id: 9125082950623)
+2025-08-29 12:41:30,298 WARNING [trading.order_manager:124] Native exit_order failed for HCLTECH: POST /orders/9125082950623/exit failed: 404 {'timestamp': 1756451490314, 'status': 404, 'error': 'Not Found', 'path': '/v2/orders/9125082950623/exit'}
+2025-08-29 12:41:30,300 INFO    [data.dhan_api:512] Placing order for 7229: BUY 1
+2025-08-29 12:41:32,417 INFO    [trading.order_manager:148] Position exited via reverse MARKET order for HCLTECH
+2025-08-29 13:12:14,976 INFO    [__main__:125] Starting Z3 Strategy with BRD configuration
+2025-08-29 13:12:14,981 INFO    [__main__:128] API credentials loaded
+2025-08-29 13:12:15,491 INFO    [websocket:89] Websocket connected
+2025-08-29 13:12:15,492 INFO    [data.dhan_api:147] WebSocket feed connection established
+2025-08-29 13:12:15,548 INFO    [data.dhan_api:186] WebSocket feed connected successfully
+2025-08-29 13:13:59,646 INFO    [strategy.signal_generator:22] Generating signal for SBIN on 2025-08-29
+2025-08-29 13:14:00,314 INFO    [data.market_data:96] Using latest available close for SBIN: 807.85 on 2025-08-26
+2025-08-29 13:14:02,214 INFO    [strategy.signal_generator:36] SBIN: Yesterday's close = 807.85
+2025-08-29 13:14:02,214 INFO    [strategy.signal_generator:37] SBIN: Today's entry reference price = 802.5
+2025-08-29 13:14:02,215 INFO    [strategy.signal_generator:47] SBIN: SHORT signal
+2025-08-29 13:14:02,215 INFO    [trading.order_manager:63] Placing SHORT order for SBIN (securityId: 3045)
+2025-08-29 13:14:02,215 INFO    [data.dhan_api:512] Placing order for 3045: SELL 1
+2025-08-29 13:14:04,170 INFO    [trading.order_manager:98] Order placed successfully for SBIN: order_id=4125082968263
+2025-08-29 13:14:04,200 INFO    [strategy.signal_generator:22] Generating signal for LTF on 2025-08-29
+2025-08-29 13:14:06,180 INFO    [data.market_data:96] Using latest available close for LTF: 220.0 on 2025-08-26
+2025-08-29 13:14:08,214 INFO    [strategy.signal_generator:36] LTF: Yesterday's close = 220.0
+2025-08-29 13:14:08,214 INFO    [strategy.signal_generator:37] LTF: Today's entry reference price = 217.8
+2025-08-29 13:14:08,216 INFO    [strategy.signal_generator:47] LTF: SHORT signal
+2025-08-29 13:14:08,216 INFO    [trading.order_manager:63] Placing SHORT order for LTF (securityId: 24948)
+2025-08-29 13:14:08,217 INFO    [data.dhan_api:512] Placing order for 24948: SELL 1
+2025-08-29 13:14:10,224 INFO    [trading.order_manager:98] Order placed successfully for LTF: order_id=9125082954663
+2025-08-29 15:11:02,517 INFO    [trading.order_manager:114] Exiting position for SBIN (order_id: 4125082968263)
+2025-08-29 15:11:04,477 WARNING [trading.order_manager:124] Native exit_order failed for SBIN: POST /orders/4125082968263/exit failed: 404 {'timestamp': 1756460464510, 'status': 404, 'error': 'Not Found', 'path': '/v2/orders/4125082968263/exit'}
+2025-08-29 15:11:04,480 INFO    [data.dhan_api:512] Placing order for 3045: BUY 1
+2025-08-29 15:11:06,416 INFO    [trading.order_manager:148] Position exited via reverse MARKET order for SBIN
+2025-08-29 15:11:06,417 INFO    [trading.order_manager:114] Exiting position for LTF (order_id: 9125082954663)
+2025-08-29 15:11:08,367 WARNING [trading.order_manager:124] Native exit_order failed for LTF: POST /orders/9125082954663/exit failed: 404 {'timestamp': 1756460468404, 'status': 404, 'error': 'Not Found', 'path': '/v2/orders/9125082954663/exit'}
+2025-08-29 15:11:08,369 INFO    [data.dhan_api:512] Placing order for 24948: BUY 1
+2025-08-29 15:11:10,416 INFO    [trading.order_manager:148] Position exited via reverse MARKET order for LTF
+2025-08-29 15:11:10,502 INFO    [__main__:138] Trading session completed with 2 trades
+2025-08-29 15:11:10,616 INFO    [utils.report_generator:123] Report generated: C:\Users\rakes\Desktop\Z3-PROJECT\reports\2025-08-29_Z3_Strategy_Report_2025-08-29_151110.xlsx
